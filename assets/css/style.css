@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; 
+}
+
+header {
+    background-color: rgb(253, 251, 251);
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .area-menu {
+    display: flex;
+    justify-content: space-around;
+    max-width: 950px;
+    margin: 0 auto;
+}
+header .area-menu .menu ul {
+    display: flex;
+}
+
+header .area-menu .menu ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 25px 10px 0 10px;
+}
+
+header .area-menu .menu ul a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #444;
+    font-size: 17px;
+}
+
+header .area-menu .menu ul a:hover {
+    transition: .1s;
+    color: rgb(26, 151, 64);
+}
+
+header .area-menu .menu ul .li-single {
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-top: 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.menu-opener {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+}
+
+/* area modal das regras */
+.modal-rules {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    text-align: center;
+    background-color: #fff;
+    width: 400px;
+    height: 400px;
+    max-width: 90%;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    transform: translate(-50%, -50%);
+}
+
+.fade {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 5;
+}
+
+.modal-rules .item-modal {
+    width: 300px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.modal-rules .item-modal h3 {
+    color: rgb(26, 151, 64);
+    margin-bottom: 5px;
+}
+
+.modal-rules .close-modal {
+    display: block;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50px;
+    width: 80px;
+    height: 30px;
+    float: right;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+.first-section {
+    background-color: #fff;
+    height: 400px;
+}
+
+.content-main {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-main h1 {
+    text-align: center;
+    color: rgb(26, 151, 64);
+    margin-bottom: 30px;
+    font-size: 50px;
+    line-height: 55px;
+    font-weight: bolder;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.content-main a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+    padding: 15px 30px;
+    margin-top: 10px;
+    width: 200px;
+    color: #fff;
+    background-color: rgb(26, 151, 64);
+    border-radius: 50px;
+}
+
+.content-main #link-single {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+
+.section {
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgb(253, 251, 251);
+    border-top: 1px solid #eee;
+}
+
+.section-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-img img {
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.section h3 {
+    text-align: center;
+    color: #555;
+}
+
+.how-itworks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 900px;
+    height: 300px;
+}
+
+.how-itworks .item {
+    margin: 0 20px;
+    text-align: center;
+    width: 320px;
+    background-color: #fff;
+    padding: 15px 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #000;
+}
+
+.how-itworks .item h3 {
+    font-size: 25px;
+    color: rgb(26, 151, 64);
+}
+
+.how-itworks .item p {
+    margin-top: 10px;
+    width: 300px;
+    color: #555;
+}
+
+/* footer area */
+
+.footer-index {
+    background-color: #fff;
+    color: #000;
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.footer-area {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.footer-area .footer-right span,
+.footer-area .footer-left span {
+    font-size: 17px;
+}
+
+.footer-area .footer-right ul {
+    margin-top: 10px;
+}
+
+.footer-area .footer-right ul li {
+    list-style: none;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.footer-area .footer-right a {
+    color: #444;
+    text-decoration: none;
+}
+
+.footer-area .footer-right a:hover,
+.footer-area .footer-right i:hover {
+    color: rgb(26, 151, 64);
+    transition: .2s;
+}
+
+.footer-area .footer-right ul li a i {
+    color: #000;
+}
+
+
+/* media screens */
+@media screen and (max-width: 700px) {
+    .menu nav {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        z-index: 99;
+        height: 50vh;
+        width: 40vw;
+        background-color: rgb(253, 251, 251);
+        transition: all ease .3s;
+        box-shadow: 1px 1px 5px #000;
+    }
+    .menu nav ul {
+        flex-direction: column;
+    }
+    .menu-opener {
+        display: block;
+    }
+    .section {
+        padding-bottom: 20px;
+    }
+    .how-itworks {
+        flex-direction: column;
+    }
+    .how-itworks .item {
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .footer-area {
+        flex-direction: column;
+    }
+    .footer-area .footer-right {
+        margin-top: 30px;
+        padding-top: 10px;
+        border-top: 1px solid #eee;
+    }
+    .footer-area .footer-right ul li {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .menu nav {
+        width: 50vw;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    .modal-rules .item-modal{
+        width: 250px;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .logo a img {
+        width: 180px;
+        height: 70px;
+    }
+    .first-section .content-main h1 {
+        font-size: 40px;
+    }
+    .section h2 {
+        font-size: 25px;
+    }
+    .section .how-itworks h3 {
+        font-size: 20px;
+    }
+    .section .how-itworks .item {
+        width: 300px;
+    }
+    .section .how-itworks .item p {
+        width: 270px;
+    }
+}
