@@ -1,18 +1,16 @@
 <?php 
 
-if(isset($_POST['raffle'])) {
-    $names = filter_input(INPUT_POST, 'nomes');
-    $FinalList = explode(",", $names); 
-    
-    if($names) {
-        $quantidade = count($FinalList);
-        $raffle = rand(0, $quantidade);
-    }else {
-        echo "<script>alert('Preencha o campo abaixo!')</script>";
-        echo "<script>window.location.href = 'sorteio_nome.php'</script>";
-    }
- 
+$names = filter_input(INPUT_POST, 'nomes');
+$FinalList = explode(",", $names); 
+
+if($names) {
+    $quantidade = count($FinalList);
+    $raffle = rand(0, $quantidade - 1);
+}else {
+    echo "<script>alert('Preencha o campo abaixo!')</script>";
+    echo "<script>window.location.href = 'sorteio_nome.php'</script>";
 }
+ 
 
 ?>
 
@@ -35,8 +33,6 @@ if(isset($_POST['raffle'])) {
         <?php 
 
         foreach($FinalList as $keys => $dados) {
-            $chave = $keys;
-
             if($raffle === $keys) {
 
                 if(strlen($dados) > 12) { // verificando se o usuario digitou algum nome com mais de 12 caracteres
@@ -56,10 +52,6 @@ if(isset($_POST['raffle'])) {
         ?>
         <button class="NewRaffle" onclick="NewSorteio()">Novo sorteio</button>
         <a href="index.php" class="link-nome-voltar">Voltar</a>
-    </div>
-
-    <div class="resultado-detalhes">
-        <p><strong>OBS</strong> - Caso você clique em sortear e não aparecer nenhum resultado, basta clicar novamente. Enjoy!!</p>
     </div>
 
     <?php require 'partials/footer.php'; ?>
