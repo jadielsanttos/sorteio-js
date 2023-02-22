@@ -14,14 +14,6 @@ function NewSorteio() {
     window.location.reload();
 }
 
-function Loading() {
-    document.querySelector('.resultado').innerHTML = 'Carregando...';
-}
-
-function ShowResult() {
-    document.querySelector('.resultado').style.display = 'flex';
-}
-
 function MenuOpenerMobile() {
     let MenuMobile = document.getElementById('menu-mobile');
 

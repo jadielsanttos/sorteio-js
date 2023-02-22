@@ -8,8 +8,8 @@
             <img src="assets/images/menu-drop-down.svg" class="menu-opener" onclick="MenuOpenerMobile()">
             <nav id="menu-mobile">
                 <ul>
-                    <li><a href="index.php">home</a></li>
-                    <li class="li-single" onclick="ModalOpener()">regras <i class="fa-sharp fa-solid fa-caret-down"></i></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li class="li-single" onclick="ModalOpener()">Regras <i class="fa-sharp fa-solid fa-caret-down"></i></li>
                 </ul>
             </nav>
         </div>

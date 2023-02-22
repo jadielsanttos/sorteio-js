@@ -10,7 +10,7 @@ if($names) {
     echo "<script>alert('Preencha o campo abaixo!')</script>";
     echo "<script>window.location.href = 'sorteio_nome.php'</script>";
 }
- 
+
 
 ?>
 
@@ -27,6 +27,11 @@ if($names) {
 <body>
 
     <?php require 'partials/menu.php'; ?>
+
+    <div class="area-countdown">
+        <h2>Sorteando...</h2>
+        <h3 class="countdown">5</h3>
+    </div>
 
     <div class="resultado">
         <h3 id="teste">Nome sorteado foi:</h3>
@@ -55,6 +60,24 @@ if($names) {
     </div>
 
     <?php require 'partials/footer.php'; ?>
+
+    <script>
+        let CountValue = document.querySelector('.countdown').innerHTML;
+
+        const CountDown = setInterval(function() {
+            CountValue--;
+            document.querySelector('.countdown').innerHTML = CountValue;
+
+            if(CountValue == 0) {
+                clearInterval(CountDown);
+
+                document.querySelector('.area-countdown').style.display = 'none';
+                document.querySelector('.resultado').style.display = 'flex';
+            }
+
+        }, 1000);
+
+    </script>
 
     <script src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/e3dc242dae.js" crossorigin="anonymous"></script>
